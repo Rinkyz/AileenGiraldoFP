@@ -8,7 +8,7 @@
             mostrar el mensaje en pantalla con el nombre de la persona, indicando que debe abonar impuestos. 
             De lo contrario, mostrar el mensaje "Persona exenta de impuestos". */
 
-            string nombre = "";
+            /*string nombre = "";
             int sueldo = 0;
 
             Console.WriteLine("ingrese el nombre");
@@ -41,6 +41,27 @@
             else
             {
                 Console.WriteLine("No puedes entrar a este sitio web");
+            }*/
+
+            int numero1 = 0;
+            int numero2 = 0;
+            
+
+            Console.WriteLine("ingrese el primer número");
+
+            numero1 = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("ingrese el segundo número");
+
+            numero2 = Int32.Parse(Console.ReadLine());
+
+            if(numero1 >= numero2)
+            {
+                Console.WriteLine($"La suma es: {numero1 + numero2}, la resta es: {numero1 - numero2}");
+            }
+            else
+            {
+                Console.WriteLine($"El producto es: {numero1 * numero2}, la division es: {numero2/numero1}");
             }
         }
     }
