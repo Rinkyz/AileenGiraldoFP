@@ -29,6 +29,19 @@
                 //Falsa
                 Console.WriteLine($"La persona {nombre}, no debe abonar impuestos");
             }
+           
+            int edad = 0;
+            Console.WriteLine("Por favor ingrese su edad");
+            edad = Convert.ToInt32(Console.ReadLine());
+
+            if (edad >= 18)
+            {
+                Console.WriteLine("Bienvenido a mi sitio web");
+            }
+            else
+            {
+                Console.WriteLine("No puedes entrar a este sitio web");
+            }
         }
     }
 }
