@@ -29,7 +29,7 @@
                 //Falsa
                 Console.WriteLine($"La persona {nombre}, no debe abonar impuestos");
             }
-           
+
             int edad = 0;
             Console.WriteLine("Por favor ingrese su edad");
             edad = Convert.ToInt32(Console.ReadLine());
