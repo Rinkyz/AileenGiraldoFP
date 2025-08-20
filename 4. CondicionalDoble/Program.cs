@@ -43,7 +43,7 @@
                 Console.WriteLine("No puedes entrar a este sitio web");
             }*/
 
-            int numero1 = 0;
+            /*int numero1 = 0;
             int numero2 = 0;
             
 
@@ -62,7 +62,28 @@
             else
             {
                 Console.WriteLine($"El producto es: {numero1 * numero2}, la division es: {numero2/numero1}");
+            }*/
+
+            int noches = 0;
+            double Preciopornoche = 200;
+            double Descuento = 0;
+
+            Console.WriteLine("Ingrese el número de noches");
+
+            noches = Convert.ToInt32(Console.ReadLine());
+
+            if(noches > 3)
+            {
+                Descuento = 0.17;
             }
+            else
+            {
+                Descuento = 0.02;
+            }
+
+            double Total = (noches * Preciopornoche) * (1 - Descuento);
+
+            Console.WriteLine($"El total a pagar es {Total}");
         }
     }
 }
