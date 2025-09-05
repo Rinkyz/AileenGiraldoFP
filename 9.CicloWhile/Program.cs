@@ -7,7 +7,7 @@
             //Crear un algoritmo que permita calcular la factorial de un número dado ppor el usuario.
 
             int contador = 0;
-            int acumulador = 0:
+            int acumulador = 0;
 
             while (contador <= 5)
             {
