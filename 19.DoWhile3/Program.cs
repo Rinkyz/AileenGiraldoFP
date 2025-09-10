@@ -15,7 +15,7 @@
             do
             {
                 estudiantes++;
-
+                Console.WriteLine($"Estudiante {estudiantes}:");
                 Console.WriteLine("Ingrese su edad");
                 edad = int.Parse(Console.ReadLine());
 
