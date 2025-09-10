@@ -14,10 +14,13 @@
             string nombre;
             int cuenta = 0;
             int saldo = 0;
-            string respuesta;
-
+            string respuesta = "";
+            int usuarios = 0;
+            int promedio = 0;
             do
             {
+                usuarios++;
+
                 Console.WriteLine("Ingrese su nombre");
                 nombre = Console.ReadLine();
 
@@ -32,16 +35,21 @@
                     Console.WriteLine($"Nombre: {nombre}, Número de cuenta: {cuenta}, Saldo: {saldo} Es apto para el crédito");
                 }
 
-                if (saldo >= 3000000)
+                if (saldo < 3000000)
                 {
                     Console.WriteLine($"Nombre: {nombre}, Número de cuenta: {cuenta}, Saldo: {saldo} No es apto para el crédito");
 
                 }
 
+                               
                 Console.WriteLine("¿Desea ingresar más informacion de usuario? s:si, n:no");
                 respuesta = Console.ReadLine().ToLower();
-
+                                
             }while(respuesta == "s");
+
+            promedio = saldo / usuarios;
+            Console.WriteLine($"Número de usuarios: {usuarios}, Promedio de saldo: {promedio}");
+
         }
     }
 }
