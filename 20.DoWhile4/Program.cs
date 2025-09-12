@@ -9,6 +9,7 @@
             int ganados = 0;
             int perdidos = 0;
             int empatados = 0;
+            int contador = 30;
             Double promediowin = 0;
             Double promediolose = 0;
             Double promediotie = 0;
@@ -22,7 +23,7 @@
 
                 if(status == "g")
                 {
-                    ganados++;
+                    ganados++;                   
                 }
                 if (status == "p")
                 {
@@ -33,16 +34,16 @@
                     empatados++;
                 }
 
-                promediowin = ganados*0.25;
-                promediolose = perdidos * 0.25;
-                promediotie = empatados * 0.25;
+                promediowin = (ganados*100)/contador;
+                promediolose = (perdidos*100)/contador;
+                promediotie = (empatados*100)/contador;
 
-            } while (partidos < 4);
+            } while (partidos < contador);
 
             Console.WriteLine($"Partidos ganados: {ganados}, Partidos perdidos: {perdidos}, Partidos empatados: {empatados}");
-            Console.WriteLine($"Promedio de partidos ganados: {promediowin}");
-            Console.WriteLine($"Promedio de partidos perdidos: {promediolose}");
-            Console.WriteLine($"Promedio de partidos empatados: {promediotie}");
+            Console.WriteLine($"Promedio de partidos ganados: {promediowin}%");
+            Console.WriteLine($"Promedio de partidos perdidos: {promediolose}%");
+            Console.WriteLine($"Promedio de partidos empatados: {promediotie}%");
         }
     }
 }
