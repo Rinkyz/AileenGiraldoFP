@@ -1,4 +1,9 @@
-﻿namespace TallerParcialCiclos
+﻿using Microsoft.Win32;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Text;
+using System.Runtime.InteropServices;
+
+namespace TallerParcialCiclos
 {
     internal class Program
     {
@@ -58,7 +63,7 @@
                potenciación. 
                Ejemplo: b=2, e=5  2=2*2*2*2*2= 32 
                Mostrar por pantalla el resultado de la potenciación. Seguir pidiendo por teclado la base y el exponente y realizar la 
-               potenciación correspondiente, hasta que el usuario ingrese por teclado el carácter de escape ‘n’*/
+               potenciación correspondiente, hasta que el usuario ingrese por teclado el carácter de escape ‘n’
 
             int num1 = 0;
             int num2 = 0;
@@ -89,8 +94,45 @@
 
             } while (respuesta == "s");
 
+             Un entrenador le ha propuesto a un atleta recorrer una ruta de cinco kilómetros durante 10 días, para determinar si es apto para la prueba de
+              5 kilómetros.Para considerarlo apto debe cumplir las siguientes condiciones: 
+              - Que en ninguna de las pruebas haga un tiempo mayor a 20 minutos.
+              - Que al menos en una de las pruebas realice un tiempo menor de 15 minutos.
+              - Que su promedio sea menor o igual a 18 minutos.
+               Diseñar un algoritmo para registrar los datos y decidir si es apto para la competencia.*/
 
+            float tiempo = 0f;
+            float promedio = 0f;
+            float acumulador = 0f;
+            bool menor = true;
 
+            for (int i = 0; i <= 10; i++)
+            {
+                 Console.WriteLine("Ingrese el tiempo en minutos que le tomó realizar la ruta");
+                 tiempo = float.Parse(Console.ReadLine());
+                
+                if(tiempo < 15)
+                {
+                    menor = true;
+                }
+                else
+                {
+                    menor = false;
+                }
+
+                acumulador += tiempo;
+            }
+
+            promedio = acumulador/10;
+
+            if(tiempo < 20 && menor == true && promedio <= 18)
+            {
+                Console.WriteLine("Es apto");
+            }
+            else
+            {
+                Console.WriteLine("No es apto");
+            }
         }
 
     }
