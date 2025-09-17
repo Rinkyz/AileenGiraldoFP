@@ -56,13 +56,14 @@
 
             /* Dados dos números enteros ingresados por teclado: b que es la base y e que es el exponente, se requiere calcular el resultado de la 
                potenciación. 
-               Ejemplo: b=2, e=5  25=2*2*2*2*2= 32 
+               Ejemplo: b=2, e=5  2=2*2*2*2*2= 32 
                Mostrar por pantalla el resultado de la potenciación. Seguir pidiendo por teclado la base y el exponente y realizar la 
                potenciación correspondiente, hasta que el usuario ingrese por teclado el carácter de escape ‘n’*/
 
             int num1 = 0;
             int num2 = 0;
-            int acumulador = 0;
+            int acumulador = 1;
+            int contador = 1;
             string respuesta = "";
 
             do
@@ -74,10 +75,20 @@
                 Console.WriteLine("Ingrese un exponente");
                 num2 = Int32.Parse(Console.ReadLine());
 
+                while (contador <= num2)
+                {
+                    acumulador *= num1;
+
+                    contador++;
+                }
+
+                Console.WriteLine($"El resultado es {acumulador}");
+
                 Console.WriteLine("¿Desea ingresar otro número y calcular el exponente elegido? s:si, n:no");
                 respuesta = Console.ReadLine().ToLower();
 
             } while (respuesta == "s");
+
 
 
         }
