@@ -103,29 +103,25 @@ namespace TallerParcialCiclos
 
             float tiempo = 0f;
             float promedio = 0f;
-            float acumulador = 0f;
-            bool menor = true;
+            float acumulador = 0f;            
+            int menorcontador = 0;
 
-            for (int i = 0; i <= 10; i++)
+            for (int i = 0; i < 10; i++)
             {
                  Console.WriteLine("Ingrese el tiempo en minutos que le tomó realizar la ruta");
                  tiempo = float.Parse(Console.ReadLine());
                 
                 if(tiempo < 15)
-                {
-                    menor = true;
+                {                    
+                    menorcontador++;
                 }
-                else
-                {
-                    menor = false;
-                }
-
+                
                 acumulador += tiempo;
             }
 
             promedio = acumulador/10;
 
-            if(tiempo < 20 && menor == true && promedio <= 18)
+            if(tiempo < 20 && menorcontador >= 1 && promedio <= 18)
             {
                 Console.WriteLine("Es apto");
             }
